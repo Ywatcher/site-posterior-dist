@@ -44,26 +44,10 @@ def site_posterior(sequence: list[int],
                              "and 3 (inclusive)")
 
     # YOUR CODE HERE
-    # <snip>
-    # Instantiate variables to hold the unnormalized posterior probabilities
-    site_posterior_unnormalized = sequence_model.site_prior
-    background_posterior_unnormalized = sequence_model.background_prior
-
-    # Compute the unnormalized posterior probabilities
-    for index, site_position in enumerate(sequence_model.site_base_probs):
-        site_posterior_unnormalized *= site_position[sequence[index]]
-        background_posterior_unnormalized *= \
-            sequence_model.background_base_probs[sequence[index]]
-    # </snip>
 
     # Normalize the posterior probabilities and store the result in a variable
     # called posterior_prob
 
     # YOUR CODE HERE
-    # <snip>
-    posterior_prob = (site_posterior_unnormalized /
-                      (site_posterior_unnormalized +
-                       background_posterior_unnormalized))
-    # </snip>
 
     return posterior_prob
